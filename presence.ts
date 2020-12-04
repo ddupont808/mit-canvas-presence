@@ -19,6 +19,10 @@ presence.on("UpdateData", async () => {
         } else if(document.location.pathname.endsWith('/assignments')) {
             presenceData.details = 'Viewing assignments for:'
             presenceData.state = document.title.replace('Assignments: ', '');
+        } else if(document.location.pathname.endsWith('/syllabus')) {
+            const course = document.querySelector('#breadcrumbs li:nth-child(2)').textContent;
+            presenceData.details = 'Viewing syllabus for:'
+            presenceData.state = course;
         } else if(document.location.pathname.endsWith('/grades')) {
             const course = document.querySelector('#breadcrumbs li:nth-child(2)').textContent;
             presenceData.details = 'Viewing grades for:'
