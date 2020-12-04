@@ -1,3 +1,5 @@
+## Discord Rich Presence for MIT Canvas
+
 # Loading the presence
 
 
